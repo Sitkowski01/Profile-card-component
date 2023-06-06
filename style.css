@@ -34,7 +34,7 @@ body{
     justify-content: space-around;
     gap: 10px;
     align-items: center;
-    border-radius: 0 0 8px 8px;
+    border-radius: 0 0 15px 15px;
 }
 .picture{
     position: absolute;
@@ -103,7 +103,7 @@ a{
 a:hover{
     color: #e24b15;
 }
-@media (max-width: 600px) {
+@media (max-width: 450px) {
     body{
         overflow: visible;
     }
@@ -117,18 +117,19 @@ a:hover{
     .table{
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 0.5fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     }
     .upper{
         grid-column: 2 / 12;
-        grid-row: 2 / 5;
+        grid-row: 3 / 6;
         background-image: url("images/Oval.png");
         background-repeat: no-repeat;
         background-size: cover;
+        border-radius: 0 15px 0 0;
     }
     .lower{
         grid-column: 2 / 12;
-        grid-row: 5 / 12;
+        grid-row: 6 / 11;
         background-color: white;
         display: flex;
         flex-direction: column;
@@ -139,11 +140,20 @@ a:hover{
     }
     .picture{
         position: absolute;
-        width: 120px;
+        width: 100px;
         border-radius: 100%;
-        left: 40%;
-        bottom: 57%;
+        left: 35%;
+        bottom: 52%;
         border: solid white 10px;
+    }
+    hr{
+        width: 300px;
+    }
+    .row{
+        display: flex;
+        flex-direction: row;
+        gap: 50px;
+        margin-bottom: 5%;
     }
     .footer{
         display: none;
